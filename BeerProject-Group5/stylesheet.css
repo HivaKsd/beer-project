@@ -1,0 +1,105 @@
+main {
+    width: 400px;
+    height: 800px;
+    margin: 0 auto;
+    padding: 5rem 10rem;
+    background: lightskyblue;
+    
+}
+
+main .searchBear a{
+    text-decoration: none;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    padding: 15px 32px;
+    font-size: 16px;
+    border-radius: 12px;
+    margin: 10px auto;
+    display: inline-block;
+
+}
+main div.searchBear{
+    margin: 10px auto;
+    display: flex;
+}
+
+main h1{
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Beer Image */
+main img{
+    width: 100px;
+    height: 300px;
+    margin: 10px auto;
+    display: flex;
+}
+
+main button {
+    background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+
+/* Random beer */
+.randBeer {
+    display: flex;
+    flex-direction: column;
+    border-style: none;
+    border: 50px black;
+    max-width: 50rem;
+    min-width: 25rem;
+    max-height: 60%;
+    min-height: 50rem;
+}
+
+/* Search beer */
+main li{
+    background: #cce5ff;
+    border-bottom: 1px solid darkblue;
+    line-height: 1.5rem;
+    list-style-position: inside;
+    cursor: default;
+}
+main li:hover{
+    background:darkgray;
+}
+
+
+main input[type=submit]{
+    background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+main > form > label{
+    font-size: x-large;
+}
+main input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid darkblue;
+    border-radius: 4px;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+  }
+
