@@ -27,11 +27,19 @@ function render(data) {
     const volumeUnit = beer.volume.unit;
     const ingredients = beer.ingredients;
     let listOfIngredients = [];
+     let listOfIngredientsMalt = [];
     for (var i in (ingredients.malt)) {
 
-        listOfIngredients.push(ingredients.malt[i].name);
+        listOfIngredientsMalt.push(ingredients.malt[i].name);
 
     }
+    let listOfIngredientsHops = [];
+    for (var i in (ingredients.hops)) {
+
+        listOfIngredientsHops.push(ingredients.hops[i].name);
+
+    }
+    let IngredientsYeast = beer.ingredients.yeast;
     const foodpair = beer.food_pairing;
     const foodPairing = [];
     for (var i in (foodpair)) {
@@ -76,7 +84,7 @@ function render(data) {
     pTagVolume.textContent = `${volumeValue} ${volumeUnit}`;
 
     bTagIngedientsTitle.textContent = 'Ingredients: ';
-    pTagIngredients.textContent = `${listOfIngredients}`;
+    pTagIngredients.textContent = `Malt: ${listOfIngredientsMalt}\n \t Hops: ${listOfIngredientsHops}\n \t Yeast: ${IngredientsYeast}`;
 
     bTagFoodPairTitle.textContent = 'Food Pairing: ';
     pTagFoodPairing.textContent = `${foodPairing}`;
