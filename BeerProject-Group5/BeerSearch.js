@@ -16,6 +16,8 @@ formElementHops.addEventListener('submit', onSubmitHops);
 
 function onSubmitName(evt) {
 
+    removeAllChildNodes(pageNumElement);
+
     const searchStr = evt.target[0].value;
 
     const url = `${api}?beer_name=${searchStr}`;
@@ -26,6 +28,8 @@ function onSubmitName(evt) {
 
 function onSubmitMalt(evt) {
 
+    removeAllChildNodes(pageNumElement);
+
     const searchStr = evt.target[0].value;
 
     const url = `${api}?malt=${searchStr}`;
@@ -35,6 +39,8 @@ function onSubmitMalt(evt) {
 }
 
 function onSubmitHops(evt) {
+
+    removeAllChildNodes(pageNumElement);
 
     const searchStr = evt.target[0].value;
 
@@ -97,7 +103,7 @@ function render(url, data, pl) {
 
     SearchResultElement.appendChild(ulElement);
 
-    removeAllChildNodes(pageNumElement);
+    // removeAllChildNodes(pageNumElement);
 
     for (let p = 0; p <= pl; p++) {
 
@@ -134,4 +140,3 @@ function onButtonClicked(evt) {
         .catch(error => console.log(error));
     
 }
-
